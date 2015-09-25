@@ -26,6 +26,8 @@ public class Documents {
 		FileInputStream file = new FileInputStream(file_);
 		
 		int nb_colonnes = 0;
+		
+		int index = 0;
 		 
         //Create Workbook instance holding reference to .xlsx file
         XSSFWorkbook workbook = new XSSFWorkbook(file);
@@ -56,15 +58,17 @@ public class Documents {
 	                {
 	                    case Cell.CELL_TYPE_NUMERIC:
 		
-	                        System.out.print(cell.getNumericCellValue() + "\t\t\t");
+	                        System.out.println(noms_titres.get(index) + " : " + cell.getNumericCellValue());
 	                        break;
 	                    case Cell.CELL_TYPE_STRING:
 	                    	
-	                        System.out.print(cell.getStringCellValue() + "\t\t\t");
+	                        System.out.println(noms_titres.get(index) + " : " + cell.getStringCellValue());
 	                        break;
 	                }
+	                index ++;
             	}
             }
+            index = 0;
             titres = false;
             System.out.println("");
         }
