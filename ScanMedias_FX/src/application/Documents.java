@@ -33,7 +33,7 @@ public class Documents {
         XSSFWorkbook workbook = new XSSFWorkbook(file);
 
         //Get first/desired sheet from the workbook
-        XSSFSheet sheet = workbook.getSheetAt(0);
+        XSSFSheet sheet = workbook.getSheetAt(1);
 
         //Iterate through each rows one by one
         Iterator<Row> rowIterator = sheet.iterator();
@@ -113,7 +113,7 @@ public class Documents {
         try
         {
             //Write the workbook in file system
-            FileOutputStream out = new FileOutputStream(new File("/home/autor/Telechargements/howtodoinjava_demo.xlsx"));
+            FileOutputStream out = new FileOutputStream(new File("/home/kaplone/Desktop/howtodoinjava_demo.xlsx"));
             workbook.write(out);
             out.close();
             System.out.println("howtodoinjava_demo.xlsx written successfully on disk.");

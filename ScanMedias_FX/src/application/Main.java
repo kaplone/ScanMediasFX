@@ -22,7 +22,8 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 		
-		File file = new File("/home/autor/Telechargements/INVENTAIRE_CHARLY_partiel.xlsx");
+		File file = new File("/home/kaplone/Desktop/BEABASE/Béa base/INVENTAIRE CHARLY2_.xlsx");
+		//File file = new File("/home/kaplone/Desktop/howtodoinjava_demo.xlsx");
 		
 		Documents.write();
 		try {
